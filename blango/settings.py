@@ -15,6 +15,7 @@ from pathlib import Path
 from configurations import Configuration, values
 import dj_database_url
 
+
 class Dev(Configuration):
 
   # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,7 +53,10 @@ class Dev(Configuration):
       'crispy_forms',
       'crispy_bootstrap5',
       "debug_toolbar",
+      'blango_auth'
   ]
+
+  AUTH_USER_MODEL = "blango_auth.User"
 
   MIDDLEWARE = [
       "debug_toolbar.middleware.DebugToolbarMiddleware",
